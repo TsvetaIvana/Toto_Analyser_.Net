@@ -1,7 +1,18 @@
-﻿internal class Program
+﻿using Toto_Analyser;
+
+public class Program
 {
-    private static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        DataLoader data = new DataLoader();
+        var result = data.LoadData().Result;
+        foreach (var item in result)
+        {
+            Console.WriteLine($"Year: {item.Key}");
+            foreach (var draw in item.Value.Draws)
+            {
+                Console.WriteLine($"Draw: {string.Join(", ", draw)}");
+            }
+        }
     }
 }

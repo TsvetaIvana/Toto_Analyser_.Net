@@ -1,0 +1,143 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|c:\\users\\ivana\\desktop\\net\\course_project-1\\toto_analyser\\lotterydraw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|solutionrelative:lotterydraw.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|c:\\users\\ivana\\desktop\\net\\course_project-1\\toto_analyser\\drawsyear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|solutionrelative:drawsyear.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|c:\\users\\ivana\\desktop\\net\\course_project-1\\toto_analyser\\toto_analyser.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|solutionrelative:toto_analyser.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|c:\\users\\ivana\\desktop\\net\\course_project-1\\toto_analyser\\dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|solutionrelative:dataloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|c:\\users\\ivana\\desktop\\net\\course_project-1\\toto_analyser\\visualiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|solutionrelative:visualiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|c:\\users\\ivana\\desktop\\net\\course_project-1\\toto_analyser\\statistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|solutionrelative:statistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|c:\\users\\ivana\\desktop\\net\\course_project-1\\toto_analyser\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{48606CBA-9CCA-4F1F-907F-7CCB1E61FE34}|Toto_Analyser.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DrawsYear.cs",
+              "DocumentMoniker": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\DrawsYear.cs",
+              "RelativeDocumentMoniker": "DrawsYear.cs",
+              "ToolTip": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\DrawsYear.cs",
+              "RelativeToolTip": "DrawsYear.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T17:40:48.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Toto_Analyser",
+              "DocumentMoniker": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\Toto_Analyser.csproj",
+              "RelativeDocumentMoniker": "Toto_Analyser.csproj",
+              "ToolTip": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\Toto_Analyser.csproj",
+              "RelativeToolTip": "Toto_Analyser.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-29T17:24:16.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LotteryDraw.cs",
+              "DocumentMoniker": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\LotteryDraw.cs",
+              "RelativeDocumentMoniker": "LotteryDraw.cs",
+              "ToolTip": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\LotteryDraw.cs",
+              "RelativeToolTip": "LotteryDraw.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T17:26:01.269Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Visualiser.cs",
+              "DocumentMoniker": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\Visualiser.cs",
+              "RelativeDocumentMoniker": "Visualiser.cs",
+              "ToolTip": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\Visualiser.cs",
+              "RelativeToolTip": "Visualiser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T17:25:07.343Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Statistics.cs",
+              "DocumentMoniker": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\Statistics.cs",
+              "RelativeDocumentMoniker": "Statistics.cs",
+              "ToolTip": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\Statistics.cs",
+              "RelativeToolTip": "Statistics.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T17:24:51.57Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataLoader.cs",
+              "DocumentMoniker": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\DataLoader.cs",
+              "RelativeDocumentMoniker": "DataLoader.cs",
+              "ToolTip": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\DataLoader.cs",
+              "RelativeToolTip": "DataLoader.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAYwDYAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T17:24:35.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Ivana\\Desktop\\Net\\Course_Project-1\\Toto_Analyser\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T17:23:55.175Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
