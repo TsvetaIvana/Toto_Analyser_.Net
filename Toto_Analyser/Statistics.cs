@@ -6,17 +6,27 @@
 
         public Statistics(IEnumerable<LotteryDraw> draws)
         {
-            _draws = draws ?? new List<LotteryDraw>();
+            _draws = draws ?? Enumerable.Empty<LotteryDraw>();
         }
 
         public Dictionary<int, int> GetTopFrequentNumbers(int topN = 10)
         {
-            return _draws
-                .SelectMany(draw => draw.Numbers)
-                .GroupBy(number => number)
-                .OrderByDescending(group => group.Count())
+            var frequencies = _draws
+                             .SelectMany(draw => draw.Numbers)
+                             .GroupBy(number => number)
+                             .ToDictionary(group => group.Key, group => group.Count());
+
+            if (topN == 49)
+            {
+                for (int i = 1; i <= 49; i++)
+                    if (!frequencies.ContainsKey(i))
+                        frequencies[i] = 0;
+            }
+
+            return frequencies
+                .OrderByDescending(kvp => kvp.Value)
                 .Take(topN)
-                .ToDictionary(group => group.Key, group => group.Count());
+                .ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
         }
 
         public List<(int Number1, int Number2, int Count)> GetHotPairs(int topN = 10)
@@ -47,7 +57,7 @@
             return _draws
                 .SelectMany(draw => draw.Numbers)
                 .GroupBy(number => GetDecadeLabel(number))
-                .OrderBy(group => group.Key.Length == 4 ? 0 : 1)
+                .OrderBy(group => int.Parse(group.Key.Split('-')[0]))
                 .ThenBy(group => group.Key)
                 .ToDictionary(group => group.Key, group => group.Count());
         }

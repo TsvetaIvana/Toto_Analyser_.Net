@@ -9,10 +9,7 @@
             int maxFrequency = topNumbers.Values.Max();
             int maxBarLength = 60;
 
-            Console.WriteLine("\n--> ХОРИЗОНТАЛНА ЛЕНТОВА ДИАГРАМА (ТОП ЧИСЛА):");
-            Console.WriteLine("------------------------------------------------");
-
-            foreach (var kvp in topNumbers)
+            foreach (var kvp in topNumbers.OrderByDescending(x => x.Value))
             {
                 int currentFreq = kvp.Value;
 
@@ -35,9 +32,6 @@
 
             int hotThreshold = sortedFrequencies[Math.Max(0, top30Index)];
             int coldThreshold = sortedFrequencies[Math.Min(sortedFrequencies.Count - 1, bottom30Index)];
-
-            Console.WriteLine("\n--> ТОПЛИННА КАРТА (1 ДО 49):");
-            Console.WriteLine("------------------------------------------------");
 
             for (int i = 1; i <= 49; i++)
             {

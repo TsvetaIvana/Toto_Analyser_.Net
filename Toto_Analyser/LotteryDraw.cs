@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Toto_Analyser
+﻿namespace Toto_Analyser
 {
     public class LotteryDraw
     {
         public int DrawNumber { get; set; }
-        public int[] Numbers { get; set; }
+        public int[] Numbers { get; set; } = Array.Empty<int>();
         public int Year { get; set; }
     }
 }

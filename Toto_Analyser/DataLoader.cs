@@ -45,7 +45,7 @@ namespace Toto_Analyser
         private async Task HandleNewFiles(List<LotteryDraw> allDraws, Dictionary<string, int> fileLinks)
         {
             Console.WriteLine($"Намерени са {fileLinks.Count} файла в сайта за обработка.\n");
-            foreach (var kvp in fileLinks.OrderBy(x => x.Value)) // Сортираме по година
+            foreach (var kvp in fileLinks.OrderBy(x => x.Value)) 
             {
                 string fullUrl = kvp.Key.StartsWith("/") ? $"{baseUrl}{kvp.Key}" : kvp.Key;
                 int year = kvp.Value;
@@ -63,7 +63,10 @@ namespace Toto_Analyser
             Console.WriteLine("Сайтът временно не е достъпен. Зареждане на локалния архив...");
             if (Directory.Exists(cacheFolder))
             {
-                var localFiles = Directory.GetFiles(cacheFolder).OrderBy(f => int.Parse(Path.GetFileNameWithoutExtension(f))).ToArray();
+                var localFiles = Directory.GetFiles(cacheFolder)
+                                .Where(f => int.TryParse(Path.GetFileNameWithoutExtension(f), out _))
+                                .OrderBy(f => int.Parse(Path.GetFileNameWithoutExtension(f)))
+                                .ToArray();
                 Console.WriteLine($"Намерени са {localFiles.Length} локални файла за обработка.\n");
 
                 foreach (var localFilePath in localFiles)
@@ -82,15 +85,14 @@ namespace Toto_Analyser
             Console.WriteLine("Проверка за нови данни от сайта...");
             var mainPageResponse = await httpClient.GetStringAsync($"{baseUrl}/statistika/6x49");
 
-            // Хваща едновременно линка и годината от самия HTML бутон (напр. >2017<)
             string pattern = @"href\s*=\s*[""'](/content/files/[^""']+\.(?:txt|docx))[""'][^>]*>\s*(\d{4})\s*<";
             MatchCollection matches = Regex.Matches(mainPageResponse, pattern, RegexOptions.IgnoreCase);
 
             foreach (Match match in matches)
             {
                 string url = match.Groups[1].Value;
-                int year = int.Parse(match.Groups[2].Value);
-                fileLinks[url] = year;
+                if (int.TryParse(match.Groups[2].Value, out int year))
+                    fileLinks[url] = year;
             }
         }
 

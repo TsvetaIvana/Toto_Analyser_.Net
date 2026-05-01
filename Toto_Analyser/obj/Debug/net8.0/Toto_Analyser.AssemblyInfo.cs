@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Toto_Analyser")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+be32c1689cf0196511da7a8b16d4e2710f67d838")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+766fa324767aac18e7bb4ed621d7982dd1301914")]
 [assembly: System.Reflection.AssemblyProductAttribute("Toto_Analyser")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Toto_Analyser")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
