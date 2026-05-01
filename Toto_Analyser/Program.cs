@@ -15,28 +15,48 @@ public class Program
 
         using DataLoader dataLoader = new DataLoader();
 
-        // Зареждаме данните
         var allDraws = await dataLoader.LoadData();
         var drawsList = allDraws.ToList();
 
-        Console.WriteLine($"\nУСПЕХ! Заредени са общо {drawsList.Count} тиража.");
+        Console.WriteLine($"Заредени са общо {drawsList.Count} тиража.");
 
         if (drawsList.Any())
         {
-            Console.WriteLine("\n--- Първите 5 записа (трябва да са от 1958 г.) ---");
-            foreach (var draw in drawsList.Take(5))
+            var stats = new Statistics(drawsList);
+
+            // --- ТЕСТ 1: Топ 10 числа ---
+            Console.WriteLine("\n--> ТОП 10 НАЙ-ЧЕСТО ИЗТЕГЛЯНИ ЧИСЛА:");
+            var topNumbers = stats.GetTopFrequentNumbers(10);
+            int rankNum = 1;
+            foreach (var kvp in topNumbers)
             {
-                Console.WriteLine($"Година: {draw.Year} | Тираж №{draw.DrawNumber,2}: {string.Join(", ", draw.Numbers)}");
+                // Забележете {kvp.Key,2} за числата и {kvp.Value,4} за пътите
+                Console.WriteLine($"{rankNum,2}. Число {kvp.Key,2} се е паднало {kvp.Value,4} пъти");
+                rankNum++;
             }
 
-            Console.WriteLine("\n--- Последните 5 записа (трябва да са от DOCX файловете) ---");
-            foreach (var draw in drawsList.TakeLast(5))
+            // --- ТЕСТ 2: Топ 10 Горещи двойки ---
+            Console.WriteLine("\n--> ТОП 10 ГОРЕЩИ ДВОЙКИ:");
+            var hotPairs = stats.GetHotPairs(10);
+            int rankPair = 1;
+            foreach (var pair in hotPairs)
             {
-                Console.WriteLine($"Година: {draw.Year} | Тираж №{draw.DrawNumber,2}: {string.Join(", ", draw.Numbers)}");
+                Console.WriteLine($"{rankPair,2}. Двойката ({pair.Number1,2}, {pair.Number2,2}) се е паднала {pair.Count,4} пъти");
+                rankPair++;
+            }
+
+            // --- ТЕСТ 3: Разпределение по десетици ---
+            Console.WriteLine("\n--> РАЗПРЕДЕЛЕНИЕ ПО ДЕСЕТИЦИ:");
+            var decades = stats.GetDecadeDistribution();
+            foreach (var kvp in decades)
+            {
+                // Тук ползваме минус (-5), за да подравним текста наляво
+                Console.WriteLine($"Диапазон {kvp.Key,-5} -> {kvp.Value,5} изтеглени числа");
             }
         }
 
-        Console.WriteLine("\nНатиснете клавиш за изход...");
+        Console.WriteLine("\n============================================");
+        Console.WriteLine("Натиснете клавиш за изход...");
         Console.ReadKey();
     }
 }

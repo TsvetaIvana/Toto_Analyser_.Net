@@ -28,7 +28,7 @@ namespace Toto_Analyser
 
             try
             {
-                await DownloadNewFiles(fileLinks);
+                await ExtractFileLinks(fileLinks);
             }
             catch { Console.WriteLine("Грешка при изтеглянето на нови файлове от сайта"); } 
 
@@ -38,12 +38,11 @@ namespace Toto_Analyser
                 return allDraws;
             }
 
-            await HandleNewlyDownloadedFiles(allDraws, fileLinks);
-            //!!!!!!!!!!!!!!!!!!
+            await HandleNewFiles(allDraws, fileLinks);
             return allDraws.OrderBy(d => d.Year).ThenBy(d => d.DrawNumber).ToList();
         }
 
-        private async Task HandleNewlyDownloadedFiles(List<LotteryDraw> allDraws, Dictionary<string, int> fileLinks)
+        private async Task HandleNewFiles(List<LotteryDraw> allDraws, Dictionary<string, int> fileLinks)
         {
             Console.WriteLine($"Намерени са {fileLinks.Count} файла в сайта за обработка.\n");
             foreach (var kvp in fileLinks.OrderBy(x => x.Value)) // Сортираме по година
@@ -78,7 +77,7 @@ namespace Toto_Analyser
             }
         }
 
-        private async Task DownloadNewFiles(Dictionary<string, int> fileLinks)
+        private async Task ExtractFileLinks(Dictionary<string, int> fileLinks)
         {
             Console.WriteLine("Проверка за нови данни от сайта...");
             var mainPageResponse = await httpClient.GetStringAsync($"{baseUrl}/statistika/6x49");
@@ -162,7 +161,6 @@ namespace Toto_Analyser
             }
         }
 
-        //!!!!!!!!!!!!!!! ВАЖНО: Този метод е оптимизиран да работи с кеширане и минимални изтегляния, за да не претоварва сайта и да осигури бърз достъп при повторно стартиране на програмата. Ако файлът вече съществува локално, той ще бъде прочетен директно от там, вместо да се изтегля отново. Това е особено полезно при големи файлове или при чести рестартирания на програмата.
         private async Task<string> GetDataTxt(string fileUrl, string localPath)
         {
             string content;
