@@ -7,13 +7,10 @@ using System.Threading.Tasks;
 
 namespace Toto_Analyser
 {
-    public class LotteryDraw : IEnumerable
+    public class LotteryDraw
     {
         public int DrawNumber { get; set; }
         public int[] Numbers { get; set; }
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            throw new NotImplementedException();
-        }
+        public int Year { get; set; }
     }
 }
