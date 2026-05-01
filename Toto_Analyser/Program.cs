@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Toto_Analyser;
+﻿using Toto_Analyser;
 
 public class Program
 {
@@ -53,6 +50,16 @@ public class Program
                 // Тук ползваме минус (-5), за да подравним текста наляво
                 Console.WriteLine($"Диапазон {kvp.Key,-5} -> {kvp.Value,5} изтеглени числа");
             }
+
+            // Инициализираме визуализатора
+            var visualizer = new Visualizer();
+
+            // За Bar Chart-а подаваме Топ 10
+            visualizer.DrawBarChart(stats.GetTopFrequentNumbers(49));
+
+            // За топлинната карта (Heat Map) ни трябват всичките 49 числа, 
+            // затова викаме GetTopFrequentNumbers(49)
+            visualizer.DrawHeatMap(stats.GetTopFrequentNumbers(49));
         }
 
         Console.WriteLine("\n============================================");
